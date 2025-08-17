@@ -1,0 +1,27 @@
+.vertical-timeline {
+  margin: 0 !important;
+
+  & .vertical-timeline-element {
+    /* max-width: 600px; */
+
+    & .vertical-timeline-element-content {
+      border-radius: var(--border-radius-sm);
+      background-color: var(--color);
+    }
+
+    & * {
+      color: lightgrey;
+    }
+    & h4,
+    h3 {
+      color: white;
+    }
+
+    & .vertical-timeline-element-date {
+      background-color: var(--color-secondary-lighter);
+      padding: var(--padding-xs) var(--padding) !important;
+      border-radius: var(--padding);
+      color: grey;
+    }
+  }
+}

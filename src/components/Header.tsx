@@ -4,9 +4,19 @@ import { useRef, useState } from "react";
 
 function Header() {
   const headerMenuRef = React.useRef<HTMLButtonElement>(null);
+  const lastScrollY = useRef(window.scrollY);
 
   const [visible, setVisible] = useState(true);
-  const lastScrollY = useRef(window.scrollY);
+  const [activeLink, setActiveLink] = useState("");
+  const allLinkRefs = {
+    home: useRef(null),
+    projects: useRef(null),
+    about: useRef(null),
+    services: useRef(null),
+    contact: useRef(null),
+    blog: useRef(null),
+  };
+  let previousActiveLink = useRef(null);
 
   const toggleMenu = () => {
     if (headerMenuRef.current) {
@@ -14,14 +24,9 @@ function Header() {
     }
   };
 
+  const deactivatePreviousActiveLink = (): void => {};
+
   useEffect(() => {
-    const links = document.querySelectorAll(".header nav ul li a");
-    links.forEach((link) => {
-      link.addEventListener("click", () => {
-        links.forEach((l) => l.classList.remove("active"));
-        link.classList.add("active");
-      });
-    });
     const headerMenu = headerMenuRef.current;
     if (headerMenu) {
       headerMenu.addEventListener("click", toggleMenu);
@@ -38,14 +43,9 @@ function Header() {
         headerMenu.classList.remove("clicked");
       }
     });
+
     // clean up function
     return () => {
-      links.forEach((link) => {
-        link.removeEventListener("click", () => {
-          links.forEach((l) => l.classList.remove("active"));
-          link.classList.add("active");
-        });
-      });
       if (headerMenu) {
         headerMenu.removeEventListener("click", toggleMenu);
       }
@@ -75,7 +75,7 @@ function Header() {
         <h2>
           <Link to="/">
             <abbr title="Daniel Olatunde" style={{ textDecoration: "none" }}>
-              Daniel O.
+              Daniel
             </abbr>
           </Link>
         </h2>
@@ -83,24 +83,100 @@ function Header() {
         <nav>
           <ul>
             <li>
-              <Link className="active" to="/">
+              <Link
+                ref={allLinkRefs.home}
+                className={`${activeLink == "home" ? "active" : ""} `}
+                onClick={() => {
+                  deactivatePreviousActiveLink();
+                  setActiveLink(() => {
+                    previousActiveLink = allLinkRefs.home;
+                    return "home";
+                  });
+                }}
+                to="/"
+              >
                 Home
               </Link>
             </li>
             <li>
-              <Link to="/projects">Projects</Link>
+              <Link
+                ref={allLinkRefs.projects}
+                className={`${activeLink == "projects" ? "active" : ""} `}
+                to="/projects"
+                onClick={() => {
+                  deactivatePreviousActiveLink();
+                  setActiveLink(() => {
+                    previousActiveLink = allLinkRefs.projects;
+                    return "projects";
+                  });
+                }}
+              >
+                Projects
+              </Link>
             </li>
             <li>
-              <Link to="/about">About</Link>
+              <Link
+                className={`${activeLink == "about" ? "active" : ""} `}
+                onClick={() => {
+                  deactivatePreviousActiveLink();
+                  setActiveLink(() => {
+                    previousActiveLink = allLinkRefs.about;
+                    return "about";
+                  });
+                }}
+                ref={allLinkRefs.about}
+                to="/about"
+              >
+                About
+              </Link>
             </li>
             <li>
-              <Link to="/services">Services</Link>
+              <Link
+                className={`${activeLink == "services" ? "active" : ""} `}
+                onClick={() => {
+                  deactivatePreviousActiveLink();
+                  setActiveLink(() => {
+                    previousActiveLink = allLinkRefs.services;
+                    return "services";
+                  });
+                }}
+                ref={allLinkRefs.services}
+                to="/services"
+              >
+                Services
+              </Link>
             </li>
             <li>
-              <Link to="/contact">Contact</Link>
+              <Link
+                className={`${activeLink == "contact" ? "active" : ""} `}
+                onClick={() => {
+                  deactivatePreviousActiveLink();
+                  setActiveLink(() => {
+                    previousActiveLink = allLinkRefs.contact;
+                    return "contact";
+                  });
+                }}
+                ref={allLinkRefs.contact}
+                to="/contact"
+              >
+                Contact
+              </Link>
             </li>
             <li>
-              <Link to="/blog">Blog</Link>
+              <Link
+                className={`${activeLink == "blog" ? "active" : ""} `}
+                onClick={() => {
+                  deactivatePreviousActiveLink();
+                  setActiveLink(() => {
+                    previousActiveLink = allLinkRefs.blog;
+                    return "blog";
+                  });
+                }}
+                ref={allLinkRefs.blog}
+                to="/blog"
+              >
+                Blog
+              </Link>
             </li>
           </ul>
         </nav>

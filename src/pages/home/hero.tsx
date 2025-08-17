@@ -11,13 +11,13 @@ const Hero = () => {
       <div className="hero__wrapper section-wrapper">
         <div className="hero__content">
           {/* Hero Content Example */}
-          <h1>Hello, I'm Danny</h1>
+          <h1>Hello, I'm Daniel</h1>
           <p>
             Welcome to my space. I'm a passionate website developer and graphic
             designer.
           </p>
 
-          <div style={{ display: "flex", gap: "1rem" }}>
+          <div style={{ display: "flex", gap: "1rem", flexWrap: "wrap" }}>
             <a
               className="hero__social-link"
               href="https://github.com/Danny-Py5"
@@ -82,7 +82,7 @@ const Hero = () => {
             <img
               width={300}
               src="/IMG_20250216_105833_585.webp"
-              alt="A pickture of Danny"
+              alt="A pickture of Daniel"
               loading="lazy"
             />
           </figure>
