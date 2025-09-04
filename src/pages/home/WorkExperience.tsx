@@ -1,10 +1,20 @@
-import React from "react";
 import ExperienceTimeline from "../../components/ExperienceTimeline";
 
 function WorkExperience() {
   const experienceData = [
     {
-      date: "2025 - Present",
+      date: "2025 - Currently",
+      title: "Jimfocug",
+      subTitle: "Junior Software Developer",
+      description: [
+        "Developed and debugged responsive code for UncleD Kitchen's website.",
+        "Tested and optimized software for a seamless customer experience.",
+        "Fixed bugs and documented the codebase to improve business digital presence.",
+        "Implemented modern contact options to improve customer engagement.",
+      ],
+    },
+    {
+      date: "2025",
       title: "Web Developer – UncleD Kitchen Website",
       subTitle: "Freelance Project — Remote / Nigeria",
       description: [
@@ -14,7 +24,7 @@ function WorkExperience() {
       ],
     },
     {
-      date: "2025 - Present",
+      date: "2025 ",
       title: "JAMB CBT Emulator",
       subTitle:
         "Client Project – For Computer Training Shop — Remote / Nigeria",
@@ -24,7 +34,7 @@ function WorkExperience() {
       ],
     },
     {
-      date: "2025 - Present",
+      date: "2025",
       title: "🎨 Graphic Designer – Freelance Projects",
       subTitle: "OlaTech Code & Design — Remote / Nigeria",
       description: [

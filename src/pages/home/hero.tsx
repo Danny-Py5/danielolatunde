@@ -13,8 +13,8 @@ const Hero = () => {
           {/* Hero Content Example */}
           <h1>Hello, I'm Daniel</h1>
           <p>
-            Welcome to my space. I'm a passionate website developer and graphic
-            designer.
+            Welcome to my space. I'm a passionate website developer, Software
+            developer and graphic designer.
           </p>
 
           <div style={{ display: "flex", gap: "1rem", flexWrap: "wrap" }}>

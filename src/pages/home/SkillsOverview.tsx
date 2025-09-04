@@ -6,6 +6,7 @@ type SkillsGroup = {
   backEnd: Skill[];
   graphicsDesign: Skill[];
   toolsAndOther: Skill[];
+  softwareDevelopment: Skill[];
 };
 
 // Utility for counting
@@ -33,6 +34,7 @@ const ProgrammingSkillOverview: React.FC<{ data: SkillsGroup }> = ({
     ...data.frontEnd,
     ...data.backEnd,
     ...data.toolsAndOther,
+    ...data.softwareDevelopment,
   ];
   return (
     <div className="overview programming-skill-overview">
@@ -40,15 +42,15 @@ const ProgrammingSkillOverview: React.FC<{ data: SkillsGroup }> = ({
       <div className="programming-skill-overview__content">
         <div>
           <strong>{getYearsOfExperience(2023)}+</strong>
-          <p>Years of Experience:</p>
+          <p>Years of Experience</p>
         </div>
         <div>
           <strong>{totalTechnologies(programmingSkills)}+</strong>
-          <p>Technologies:</p>{" "}
+          <p>Technologies</p>{" "}
         </div>
         <div>
           <strong>{averageProficiency(programmingSkills)}%</strong>
-          <p>Average Proficiency:</p>{" "}
+          <p>Average Proficiency</p>{" "}
         </div>
       </div>
     </div>
@@ -69,11 +71,11 @@ const GraphicDesignSkillOverview: React.FC<{ data: SkillsGroup }> = ({
         </div>
         <div>
           <strong>{totalTechnologies(skills)}+</strong>
-          <p>Technologies:</p>
+          <p>Technologies</p>
         </div>
         <div>
           <strong>{averageProficiency(skills)}%</strong>
-          <p>Average Proficiency:</p>
+          <p>Average Proficiency</p>
         </div>
       </div>
     </div>

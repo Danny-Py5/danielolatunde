@@ -1,4 +1,3 @@
-import React from "react";
 import CircularBar from "../../components/CircularBar";
 import {
   ProgrammingSkillOverview,
@@ -17,6 +16,7 @@ function Skills() {
     frontEnd: Skill[];
     backEnd: Skill[];
     graphicsDesign: Skill[];
+    softwareDevelopment: Skill[];
     toolsAndOther: Skill[];
   }> = [
     {
@@ -61,6 +61,12 @@ function Skills() {
           imgSrc: "/skills/mongodb.png",
           rate: "Advanced",
         },
+        {
+          name: "Firebase",
+          value: 80,
+          imgSrc: "/skills/firebase.png",
+          rate: "Advanced",
+        },
       ],
       graphicsDesign: [
         {
@@ -102,6 +108,26 @@ function Skills() {
           rate: "Advanced",
         },
       ],
+      softwareDevelopment: [
+        {
+          name: "React Native",
+          value: 75,
+          imgSrc: "/skills/react-native.png",
+          rate: "Advanced",
+        },
+        {
+          name: "Dart",
+          value: 80,
+          imgSrc: "/skills/dart.png",
+          rate: "Advanced",
+        },
+        {
+          name: "Flutter",
+          value: 20,
+          imgSrc: "/skills/flutter.png",
+          rate: "Beginner",
+        },
+      ],
     },
   ];
   return (
@@ -124,8 +150,10 @@ function Skills() {
             maxWidth: "50ch",
           }}
         >
-          I have two skill sets that include web development and graphic design.
-          Here are some of my skills in these areas.
+          I have two skill sets that include{" "}
+          <em style={{ textDecoration: "underline" }}>Programming</em> and
+          <em style={{ textDecoration: "underline" }}>Graphic Design.</em> Here
+          are some of my skills in these areas.
         </p>
 
         <div className="skills__wrapper-inner-grid">
@@ -182,6 +210,32 @@ function Skills() {
                 })}
               </ul>
             </div>
+          </div>
+
+          {/* Software development skills */}
+          <div className="skills__software">
+            <h3 className="skills__h3">My Software Development Skills</h3>
+            <ul className="skills__ul skills__software-ul" id="skillsSoftware">
+              {skills[0].softwareDevelopment.map((skill) => {
+                return (
+                  <li className="skill__item" key={skill.name}>
+                    <figure>
+                      <img
+                        width={80}
+                        src={skill.imgSrc}
+                        alt={skill.name + " image"}
+                      />
+                      <figcaption>{skill.name}</figcaption>
+                    </figure>
+                    <p className="skill-set">
+                      Software Development Skill | {skill.name}
+                    </p>
+                    <CircularBar value={skill.value} />
+                    <p>{skill.rate}</p>
+                  </li>
+                );
+              })}
+            </ul>
           </div>
 
           {/* graphic design skills */}
