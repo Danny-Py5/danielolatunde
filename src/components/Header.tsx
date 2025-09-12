@@ -1,8 +1,10 @@
 import React, { useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { useRef, useState } from "react";
 
 function Header() {
+  const location = useLocation();
+  console.log(location.pathname);
   const headerMenuRef = React.useRef<HTMLButtonElement>(null);
   const lastScrollY = useRef(window.scrollY);
 
@@ -16,7 +18,7 @@ function Header() {
     contact: useRef(null),
     blog: useRef(null),
   };
-  let previousActiveLink = useRef(null);
+  // let previousActiveLink = useRef(null);
 
   const toggleMenu = () => {
     if (headerMenuRef.current) {
@@ -24,7 +26,9 @@ function Header() {
     }
   };
 
-  const deactivatePreviousActiveLink = (): void => {};
+  // const deactivatePreviousActiveLink = (): void => {
+  //   console.log(previousActiveLink.current);
+  // };
 
   useEffect(() => {
     const headerMenu = headerMenuRef.current;
@@ -85,11 +89,17 @@ function Header() {
             <li>
               <Link
                 ref={allLinkRefs.home}
-                className={`${activeLink == "home" ? "active" : ""} `}
+                className={`${
+                  activeLink == "home" &&
+                  location.pathname !== "/projects" &&
+                  location.pathname !== "/contact"
+                    ? "active"
+                    : ""
+                } `}
                 onClick={() => {
-                  deactivatePreviousActiveLink();
+                  // deactivatePreviousActiveLink();
                   setActiveLink(() => {
-                    previousActiveLink = allLinkRefs.home;
+                    // previousActiveLink = allLinkRefs.home;
                     return "home";
                   });
                 }}
@@ -101,12 +111,15 @@ function Header() {
             <li>
               <Link
                 ref={allLinkRefs.projects}
-                className={`${activeLink == "projects" ? "active" : ""} `}
+                className={`${
+                  activeLink === "projects" || location.pathname === "/projects"
+                    ? "active"
+                    : ""
+                }`}
                 to="/projects"
                 onClick={() => {
-                  deactivatePreviousActiveLink();
                   setActiveLink(() => {
-                    previousActiveLink = allLinkRefs.projects;
+                    // previousActiveLink = allLinkRefs.projects;
                     return "projects";
                   });
                 }}
@@ -118,9 +131,9 @@ function Header() {
               <Link
                 className={`${activeLink == "about" ? "active" : ""} `}
                 onClick={() => {
-                  deactivatePreviousActiveLink();
+                  // deactivatePreviousActiveLink();
                   setActiveLink(() => {
-                    previousActiveLink = allLinkRefs.about;
+                    // previousActiveLink = allLinkRefs.about;
                     return "about";
                   });
                 }}
@@ -134,9 +147,9 @@ function Header() {
               <Link
                 className={`${activeLink == "services" ? "active" : ""} `}
                 onClick={() => {
-                  deactivatePreviousActiveLink();
+                  // deactivatePreviousActiveLink();
                   setActiveLink(() => {
-                    previousActiveLink = allLinkRefs.services;
+                    // previousActiveLink = allLinkRefs.services;
                     return "services";
                   });
                 }}
@@ -148,11 +161,15 @@ function Header() {
             </li>
             <li>
               <Link
-                className={`${activeLink == "contact" ? "active" : ""} `}
+                className={`${
+                  activeLink == "contact" || location.pathname == "/contact"
+                    ? "active"
+                    : ""
+                } `}
                 onClick={() => {
-                  deactivatePreviousActiveLink();
+                  // deactivatePreviousActiveLink();
                   setActiveLink(() => {
-                    previousActiveLink = allLinkRefs.contact;
+                    // previousActiveLink = allLinkRefs.contact;
                     return "contact";
                   });
                 }}
@@ -166,9 +183,9 @@ function Header() {
               <Link
                 className={`${activeLink == "blog" ? "active" : ""} `}
                 onClick={() => {
-                  deactivatePreviousActiveLink();
+                  // deactivatePreviousActiveLink();
                   setActiveLink(() => {
-                    previousActiveLink = allLinkRefs.blog;
+                    // previousActiveLink = allLinkRefs.blog;
                     return "blog";
                   });
                 }}
