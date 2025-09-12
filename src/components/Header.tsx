@@ -92,7 +92,10 @@ function Header() {
                 className={`${
                   activeLink == "home" &&
                   location.pathname !== "/projects" &&
-                  location.pathname !== "/contact"
+                  location.pathname !== "/about" &&
+                  location.pathname !== "/services" &&
+                  location.pathname !== "/contact" &&
+                  location.pathname !== "/blog"
                     ? "active"
                     : ""
                 } `}
@@ -129,7 +132,11 @@ function Header() {
             </li>
             <li>
               <Link
-                className={`${activeLink == "about" ? "active" : ""} `}
+                className={`${
+                  activeLink === "about" || location.pathname === "/about"
+                    ? "active"
+                    : ""
+                }`}
                 onClick={() => {
                   // deactivatePreviousActiveLink();
                   setActiveLink(() => {
@@ -145,7 +152,11 @@ function Header() {
             </li>
             <li>
               <Link
-                className={`${activeLink == "services" ? "active" : ""} `}
+                className={`${
+                  activeLink === "services" || location.pathname === "/services"
+                    ? "active"
+                    : ""
+                }`}
                 onClick={() => {
                   // deactivatePreviousActiveLink();
                   setActiveLink(() => {
@@ -162,7 +173,7 @@ function Header() {
             <li>
               <Link
                 className={`${
-                  activeLink == "contact" || location.pathname == "/contact"
+                  activeLink === "contact" || location.pathname === "/contact"
                     ? "active"
                     : ""
                 } `}
@@ -181,7 +192,11 @@ function Header() {
             </li>
             <li>
               <Link
-                className={`${activeLink == "blog" ? "active" : ""} `}
+                className={`${
+                  activeLink === "blog" || location.pathname === "/blog"
+                    ? "active"
+                    : ""
+                }`}
                 onClick={() => {
                   // deactivatePreviousActiveLink();
                   setActiveLink(() => {
