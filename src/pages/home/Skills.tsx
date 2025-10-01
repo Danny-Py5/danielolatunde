@@ -123,9 +123,9 @@ function Skills() {
         },
         {
           name: "Flutter",
-          value: 20,
+          value: 80,
           imgSrc: "/skills/flutter.png",
-          rate: "Beginner",
+          rate: "Advanced",
         },
       ],
     },
