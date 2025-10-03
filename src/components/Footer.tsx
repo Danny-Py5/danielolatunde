@@ -31,7 +31,7 @@ function Footer() {
             <li>
               <a
                 style={{ whiteSpace: "nowrap" }}
-                href="mailto:yourmail@gmail.com"
+                href="mailto:olatundedaniel943@gmail.com"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Gmail"
