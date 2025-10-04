@@ -10,7 +10,10 @@ import SocialLinks from "./SocialLinks"; // import React, { useContext } from "r
 function Footer() {
   return (
     <section className="footer" id="footer">
-      <div className="footer__section-wrapper section-wrapper padding-top-2rem">
+      <div
+        className="footer__section-wrapper section-wrapper padding-top-2rem"
+        style={{ paddingBottom: "0" }}
+      >
         <div className="footer__about">
           <h3>Daniel</h3>
           <p className="margin-bottom-2rem">
@@ -61,6 +64,13 @@ function Footer() {
               </a>
             </li>
           </ul>
+        </div>
+
+        <div className="copyright">
+          <p>
+            &copy; {new Date().getFullYear()} Daniel Olatunde. All rights
+            reserved.
+          </p>
         </div>
       </div>
     </section>
