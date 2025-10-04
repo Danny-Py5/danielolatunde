@@ -5,7 +5,7 @@ import Switch from "./Switch";
 
 function Header() {
   const location = useLocation();
-  console.log(location.pathname);
+  // console.log(location.pathname);
   const headerMenuRef = React.useRef<HTMLButtonElement>(null);
   const lastScrollY = useRef(window.scrollY);
 

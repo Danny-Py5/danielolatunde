@@ -1,16 +1,19 @@
 import { useEffect, useState } from "react";
 
 function Switch() {
-  const [isOn, setIsOn] = useState(getThemeFromLocalStorage());
+  const [isOn, setIsOn] = useState(
+    getThemeFromLocalStorage() ||
+      window.matchMedia("(prefers-color-scheme: dark)").matches
+  );
 
   const dark = {
     "--body-background-color": "#070608ff",
     "--background-color": "var(--card-background-color)",
+    "--card-background-color": "var(--color-white)",
     "--colour-primary": "#fff",
     "--color-primary": "#fff",
     "--color": "#d6d6d6ff",
-    "--color-white": "#333",
-    "--card-background-color": "#333",
+    "--color-white": "#1f1f1fff",
     "--color-invert": "var(--card-background-color)",
     "--navbar-background-color": "#444",
     "--black": "#111111ff",
@@ -76,7 +79,7 @@ export default Switch;
 
 function saveThemeToLocalStorage(isDark: boolean) {
   localStorage.setItem("isDarkTheme", JSON.stringify(isDark));
-  console.log(`saved to local storage --> ${isDark}`);
+  //   console.log(`saved to local storage --> ${isDark}`);
 }
 
 function getThemeFromLocalStorage(): boolean {
