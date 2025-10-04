@@ -65,14 +65,13 @@ function Footer() {
             </li>
           </ul>
         </div>
-
-        <div className="copyright">
-          <p>
-            &copy; {new Date().getFullYear()} Daniel Olatunde. All rights
-            reserved.
-          </p>
-          <small>Version 2.0.0</small>
-        </div>
+      </div>
+      <div className="copyright">
+        <p>
+          &copy; {new Date().getFullYear()} Daniel Olatunde. All rights
+          reserved.
+        </p>
+        <small>Version 2.0.0</small>
       </div>
     </section>
   );

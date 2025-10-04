@@ -1,0 +1,126 @@
+[33mcommit a62725dfb67bd1aaf2a7ec30f408fb9281e6ea6c[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Merge: 1c6cf63 5f45273
+Author: Olatunde Daniel Fatokun <olatundedaniel943@gmail.com>
+Date:   Sat Oct 4 13:02:36 2025 +0100
+
+    merge and resolve conflict
+
+[33mcommit 5f45273b624f26f3294fdbf33ac407eaa6cd585f[m[33m ([m[1;32mfix[m[33m)[m
+Author: Olatunde Daniel Fatokun <olatundedaniel943@gmail.com>
+Date:   Sat Oct 4 12:58:16 2025 +0100
+
+    fix footer
+
+[33mcommit 1c6cf63486fb19a0cae1339f9397e80e30d5fe6a[m
+Author: Olatunde Daniel Fatokun <olatundedaniel943@gmail.com>
+Date:   Sat Oct 4 12:44:55 2025 +0100
+
+    version 2.0.1
+
+[33mcommit 3b477cf1e54a1534a3ff7e5e97ef158dae0ae127[m
+Author: Olatunde Daniel Fatokun <olatundedaniel943@gmail.com>
+Date:   Sat Oct 4 11:09:44 2025 +0100
+
+    remove user preference theme keeping localstorage
+
+[33mcommit b30742f99fe8c86ed529b1c84bceed51a9f15e74[m
+Author: Olatunde Daniel Fatokun <olatundedaniel943@gmail.com>
+Date:   Sat Oct 4 11:04:11 2025 +0100
+
+    correct color
+
+[33mcommit 3b817188cf52a6efa2e30410cb1e27678f2e961d[m
+Author: Olatunde Daniel Fatokun <olatundedaniel943@gmail.com>
+Date:   Sat Oct 4 10:48:29 2025 +0100
+
+    save theme to localstorage
+
+[33mcommit beba0ba4577fbac1e888c5fc49675c90b687df98[m
+Author: Olatunde Daniel Fatokun <olatundedaniel943@gmail.com>
+Date:   Sat Oct 4 10:32:57 2025 +0100
+
+    added version
+
+[33mcommit aad4bb6828e4e3a2e1e5b7e80467490ec9a06d40[m
+Author: Olatunde Daniel Fatokun <olatundedaniel943@gmail.com>
+Date:   Sat Oct 4 10:30:29 2025 +0100
+
+    clean up paddings
+
+[33mcommit 4c33529f296c57a2280ecee9050f8c6d398bec6c[m
+Author: Olatunde Daniel Fatokun <olatundedaniel943@gmail.com>
+Date:   Sat Oct 4 10:17:43 2025 +0100
+
+    reduce body's padding bottom
+
+[33mcommit eb3ca09517298d19cdedfefe87c08b6df8fc6fea[m
+Author: Olatunde Daniel Fatokun <olatundedaniel943@gmail.com>
+Date:   Sat Oct 4 10:16:17 2025 +0100
+
+    implement dark and light mode
+
+[33mcommit 10ce17fb3a0d5977aecda18aff86b52a4bd9faec[m
+Author: Olatunde Daniel Fatokun <olatundedaniel943@gmail.com>
+Date:   Fri Oct 3 16:47:03 2025 +0100
+
+    update: rephrase and make sentences human with help of assistance tool
+
+[33mcommit fdf3accfe3750904a460bb34ee6922bb3dcc8d41[m
+Author: Olatunde Daniel Fatokun <155958082+Danny-Py5@users.noreply.github.com>
+Date:   Fri Oct 3 08:08:32 2025 +0100
+
+    Update Footer.txs  (added the right email address)
+
+[33mcommit e5c591f541a219401898d17a16cc24f03ebfcb67[m
+Author: Olatunde Daniel Fatokun <olatundedaniel943@gmail.com>
+Date:   Wed Oct 1 23:58:54 2025 +0100
+
+    clear off unused imports and variable
+
+[33mcommit d1e805ef5584ae9dd1a08a5977cdef3ac2dc5349[m
+Author: Olatunde Daniel Fatokun <olatundedaniel943@gmail.com>
+Date:   Wed Oct 1 23:45:55 2025 +0100
+
+    update: flutter skill rate
+
+[33mcommit d01be4a928d834b8cfc8241bbdaa5f29217864ab[m
+Author: Daniel Olatunde <olatundedaniel943@gmail.com>
+Date:   Fri Sep 12 18:52:45 2025 +0100
+
+    finished footer and fix bugs
+
+[33mcommit d43d68a0470dec44fa43e58d5f943dc7c942486d[m
+Author: Daniel Olatunde <olatundedaniel943@gmail.com>
+Date:   Fri Sep 12 14:46:31 2025 +0100
+
+    indicate responsible header indicator when cta is clicked
+
+[33mcommit cf3c2cec6c1c0b1234c68c47ad9e86e83422c1f3[m
+Author: Daniel Olatunde <olatundedaniel943@gmail.com>
+Date:   Thu Sep 4 16:18:58 2025 +0100
+
+    added software skills
+
+[33mcommit a43d298ff6dc9b783d98331120e405aac81c8d36[m
+Author: Daniel Olatunde <olatundedaniel943@gmail.com>
+Date:   Sun Aug 17 18:53:30 2025 +0100
+
+    fixed header bug
+
+[33mcommit f33e94ae25fc62caf1e7f09170b0eeae46e8e586[m
+Author: Daniel Olatunde <olatundedaniel943@gmail.com>
+Date:   Fri Aug 1 20:02:00 2025 +0100
+
+    working experience
+
+[33mcommit 8addb4937fe949438fefefaac00edb4bbfd5b765[m
+Author: Daniel Olatunde <olatundedaniel943@gmail.com>
+Date:   Thu Jul 31 15:40:53 2025 +0100
+
+    finished home, working on skills
+
+[33mcommit 8039a77993c8d2d5430236e9229908cf39025e28[m
+Author: Daniel Olatunde <olatundedaniel943@gmail.com>
+Date:   Tue Jul 29 22:40:20 2025 +0100
+
+    init

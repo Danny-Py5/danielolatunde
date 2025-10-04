@@ -503,10 +503,6 @@ header:has(ul li a.active) a.active {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: var(--card-background-color);
-    grid-column: 1 / 4;
-    border-top-right-radius: var(--border-radius-l);
-    border-top-left-radius: var(--border-radius-l);
 
     & p {
       margin-bottom: 0;
