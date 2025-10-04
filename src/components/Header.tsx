@@ -79,7 +79,11 @@ function Header() {
       <div className="section-wrapper header__wrapper">
         <h2>
           <Link to="/">
-            <abbr title="Daniel Olatunde" style={{ textDecoration: "none" }}>
+            <abbr
+              className="logo"
+              title="Daniel Olatunde"
+              style={{ textDecoration: "none" }}
+            >
               Daniel
             </abbr>
           </Link>

@@ -192,7 +192,7 @@ header ul {
   align-items: center;
   gap: 2rem;
 }
-header a:first-of-type {
+.logo {
   font-size: 1.5rem;
   font-weight: 700;
 }

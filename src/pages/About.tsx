@@ -1,6 +1,6 @@
 import "./styles/about.css";
 import "../index.css";
-import styles from "../utils.module.css";
+// import styles from "../utils.module.css";
 
 function About() {
   // const navigate = Navigate();
