@@ -192,6 +192,10 @@ header ul {
   align-items: center;
   gap: 2rem;
 }
+header a:first-of-type {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
 header ul li .switch {
   justify-self: flex-end;
 }
@@ -382,7 +386,7 @@ header:has(ul li a.active) a.active {
   text-align: center;
   flex: 1 1 250px;
   gap: 0.5rem;
-  max-width: 300px;
+  max-width: 500px;
   padding: var(--padding-xl) var(--padding);
   border-radius: var(--border-radius-l);
   background-color: var(--color-white);
