@@ -500,6 +500,7 @@ header:has(ul li a.active) a.active {
     margin-top: 2rem;
     text-align: center;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     background-color: var(--card-background-color);
