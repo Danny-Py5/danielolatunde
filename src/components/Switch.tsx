@@ -1,8 +1,7 @@
 import { useEffect, useState } from "react";
 
 function Switch() {
-  const [isOn, setIsOn] = useState(false);
-  console.log(isOn);
+  const [isOn, setIsOn] = useState(getThemeFromLocalStorage());
 
   const dark = {
     "--body-background-color": "#070608ff",
@@ -31,13 +30,15 @@ function Switch() {
   };
 
   const theme = isOn ? dark : light;
+  // save to local storage
+  saveThemeToLocalStorage(isOn);
 
   useEffect(() => {
     const root = document.documentElement;
     Object.entries(theme).forEach(([key, value]) => {
       root.style.setProperty(key, value as string);
     });
-  });
+  }, [theme]);
 
   return (
     <div
@@ -72,3 +73,13 @@ function Switch() {
   );
 }
 export default Switch;
+
+function saveThemeToLocalStorage(isDark: boolean) {
+  localStorage.setItem("isDarkTheme", JSON.stringify(isDark));
+  console.log(`saved to local storage --> ${isDark}`);
+}
+
+function getThemeFromLocalStorage(): boolean {
+  const isDarkTheme = localStorage.getItem("isDarkTheme");
+  return isDarkTheme ? JSON.parse(isDarkTheme) : false;
+}
