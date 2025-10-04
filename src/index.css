@@ -6,17 +6,24 @@
 
 :root {
   --max-width: 1200px;
-  --background-color: whitesmoke;
+  --body-background-color: whitesmoke;
   --colour-primary: #000c05;
   --color-primary: #000c05;
   --color: #333;
+  --black: #020101;
   --color-white: whitesmoke;
   --color-secondary: #bb1bff;
   --color-secondary-dark: #9114a2;
   --color-secondary-light: #e478ff;
   --color-secondary-lighter: #f4d7fd;
+  --card-background-color-secondary: #7272721c;
 
-  --border-color: #ddd;
+  --card-background-color: rgba(255, 255, 255, 0.943);
+  --header-link-indicator-background-color: var(--color);
+  --navbar-background-color: whitesmoke;
+  --color-invert: #000;
+
+  --border-color: #919191;
 
   --shadow-color: rgba(0, 0, 0, 0.1);
   --shadow-color-dark: rgba(0, 0, 0, 0.3);
@@ -94,7 +101,7 @@ html {
 body {
   margin: 0;
   padding: 0;
-  background-color: var(--background-color);
+  background-color: var(--body-background-color);
   color: var(--color);
   max-width: var(--max-width);
   padding-bottom: 700px;
@@ -107,8 +114,9 @@ h4,
 h5,
 h6 {
   font-weight: 700; /* or 900 for a bolder style */
+  color: var(--color-primary);
 }
-p,
+/* p,
 a,
 h1,
 h2,
@@ -120,11 +128,16 @@ text,
 strong,
 b,
 figcaption {
-  /* font-family: var(--font-family); */
-  color: var(--color);
-}
-p {
+  
+} */
+p,
+a,
+li,
+span,
+figcaption,
+text {
   line-height: var(--line-height, 1.5);
+  color: var(--color);
 }
 a {
   text-decoration: underline;
@@ -132,6 +145,7 @@ a {
   color: inherit;
   font-size: var(--font-size-sm);
   transition: color var(--transition-duration);
+  line-height: unset !important;
 }
 h2 {
   font-weight: 600;
@@ -165,7 +179,7 @@ ul {
   justify-content: space-between;
   align-items: center;
   padding: var(--padding);
-  background-color: rgba(255, 255, 255, 0.943);
+  background-color: var(--card-background-color);
   z-index: 1000;
 
   /* background: var(--colour-primary); */
@@ -178,18 +192,25 @@ header ul {
   align-items: center;
   gap: 2rem;
 }
+header ul li .switch {
+  justify-self: flex-end;
+}
 .header a {
   text-decoration: none;
 }
 header ul li a {
   font-weight: 600;
+  color: var(--color);
   transition: var(--transition-duration);
 }
 header ul li a.active {
-  background-color: var(--colour-primary);
-  color: var(--color-white);
+  background-color: var(--header-link-indicator-background-color);
+  /* color: var(--color-white); */
   padding: 0.5rem 1rem;
   border-radius: var(--border-radius-l);
+}
+header:has(ul li a.active) a.active {
+  color: var(--body-background-color);
 }
 .header__menu {
   place-content: center;
@@ -203,7 +224,7 @@ header ul li a.active {
   width: 35px;
   height: 4px;
   border-radius: var(--border-radius-l);
-  background-color: var(--colour-primary);
+  background-color: var(--color-primary);
   /*position: absolute;*/
   transition: 0.25s;
 }
@@ -267,7 +288,7 @@ header ul li a.active {
   border-radius: var(--border-radius-l, 1.5rem);
 }
 .hero__cta {
-  background: var(--colour-primary);
+  background: var(--color-primary);
   padding: 0.75rem 2rem;
   display: inline-block;
   color: var(--color-white);
@@ -389,7 +410,8 @@ header ul li a.active {
   box-shadow: 0 2px 25px var(--shadow-color);
 }
 .skill-set {
-  background-color: var(--color-secondary-lighter);
+  background-color: var(--navbar-background-color);
+  box-shadow: var(--shadow-color);
   margin: 1rem 0 2rem;
   padding: 0.2rem var(--padding);
   border-radius: var(--border-radius-l);
@@ -402,7 +424,7 @@ header ul li a.active {
   row-gap: var(--section-gap);
 }
 .overview {
-  background-color: var(--color-primary);
+  background-color: var(--black);
   padding: var(--padding-l);
   border-radius: var(--border-radius-l);
   border: 2px solid var(--border-color);
@@ -413,7 +435,7 @@ header ul li a.active {
   }
 
   & * {
-    color: var(--color-white);
+    color: whitesmoke;
   }
 
   & .graphic-design-overview__content,
@@ -438,10 +460,11 @@ header ul li a.active {
   }
 }
 .work-experience__wrapper {
-  background-color: var(--color-primary);
+  background-color: var(--card-background-color-secondary);
+  border-radius: var(--border-radius-l);
 
   & h2 {
-    color: var(--color-white);
+    color: var(--color-primary);
     margin-bottom: var(--margin-xl) !important;
   }
 }
@@ -502,9 +525,13 @@ header ul li a.active {
     top: 0;
     right: 0;
     width: min(350px, 90%);
-    background-color: var(--color-white);
+    background-color: var(
+      --navbar-background-color,
+      var(--card-background-color)
+    );
     box-shadow: 0 2px 25px var(--shadow-color);
     border-radius: var(--border-radius-l);
+    /* border: 2px solid var(--border-color); */
   }
   header :has(.header__menu.clicked) ul li {
     width: 100%;

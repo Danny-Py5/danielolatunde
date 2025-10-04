@@ -10,8 +10,8 @@ function CirclarBar({ value }: { value: number }): React.ReactElement {
         text={`${value}%`}
         styles={buildStyles({
           textColor: "#222",
-          pathColor: "var(--color-primary)",
-          trailColor: "#ddd",
+          pathColor: "var(--color-secondary)",
+          trailColor: "#dbdbdbff",
         })}
       />
     </div>

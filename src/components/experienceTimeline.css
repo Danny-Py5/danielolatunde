@@ -6,22 +6,19 @@
 
     & .vertical-timeline-element-content {
       border-radius: var(--border-radius-sm);
-      background-color: var(--color);
+      background-color: var(--color-white);
     }
 
-    & * {
-      color: lightgrey;
-    }
     & h4,
     h3 {
-      color: white;
+      color: var(--color-primary);
     }
 
     & .vertical-timeline-element-date {
-      background-color: var(--color-secondary-lighter);
+      background-color: var(--color-secondary);
+      color: var(--color-primary);
       padding: var(--padding-xs) var(--padding) !important;
       border-radius: var(--padding);
-      color: grey;
     }
   }
 }

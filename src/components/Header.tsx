@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { useRef, useState } from "react";
+import Switch from "./Switch";
 
 function Header() {
   const location = useLocation();
@@ -209,6 +210,9 @@ function Header() {
               >
                 Blog
               </Link>
+            </li>
+            <li>
+              <Switch />
             </li>
           </ul>
         </nav>
