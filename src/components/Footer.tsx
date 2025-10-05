@@ -6,7 +6,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import QuickLinks from "./QuickLinks";
 import SocialLinks from "./SocialLinks"; // import React, { useContext } from "react";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 
 function Footer() {
   return (

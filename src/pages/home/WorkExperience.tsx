@@ -7,8 +7,8 @@ function WorkExperience() {
       title: "Jimfocug",
       subTitle: "Junior Software Developer | Remote in Nigeria",
       description: [
-        "Maintained and improved existing applications to keep them running smoothly.",
-        "Debugged and fixed issues to ensure apps worked without errors.",
+        "Maintained and improved existing applications so they keep running smoothly.",
+        "Debugged and fixed issues to ensure that apps always works without errors.",
         "Tested features and optimized performance for a better user experience.",
         "Collaborated on projects with other developers to build and refine apps.",
         "Documented code changes to make future updates easier.",
@@ -20,7 +20,7 @@ function WorkExperience() {
       subTitle: "Freelance Project — Remote in Nigeria",
       description: [
         "Built a responsive website for UncleD Kitchen to showcase their menu online.",
-        "Added sections to display food items and share important details like location and contacts.",
+        "Added sections to display food items and to also share important details like their location and contacts.",
         "Included easy options for visitors to reach out through WhatsApp, phone, or email to place orders.",
         "Made it simple for customers to connect with UncleD Kitchen without stress.",
       ],

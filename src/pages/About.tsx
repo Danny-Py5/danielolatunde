@@ -20,19 +20,20 @@ function About() {
           <p>
             My journey into coding started back in secondary school when my
             Physics teacher introduced me to programming. Since then, I’ve been
-            hooked. I constantly learn, build, and improve every day.
+            hooked. I always learn, build, and improve every day by day.
           </p>
 
           <p>
             I believe in consistency and relentless effort, and now, those years
-            of practice are paying off. Now I just have to work smart not
-            harder. I enjoy creating websites that don’t just look good but also
-            feel smooth and natural to use.
+            of practice are paying me. Now I just have to work smart not harder.
+            I enjoy creating websites that is not just looking good but feel
+            smooth and always natural to use to any user.
           </p>
 
           <p>
-            For me, code is more than just syntax, it’s a tool for expression,
-            clarity, and creating real experiences that people enjoy.
+            For me, code is more than just syntax and writing magic words, it’s
+            a tool that is for expression, clarity, and creating real
+            experiences that people can enjoy.
           </p>
           <p>
             <i>I just fell good when I handle my keys coz I love what I do.</i>
@@ -44,9 +45,9 @@ function About() {
               Beyond coding, I’m also a <strong>Graphics Designer</strong>,{" "}
               <strong>hairstylist</strong>, <strong>keyboardist</strong>, and{" "}
               <strong>guitarist</strong>. Creativity is a big part of who I am —
-              whether it’s designing, developing a website, styling hair, or
-              playing music, I love turning ideas into something beautiful and
-              inspiring.
+              either it’s designing, developing a website, styling hair, or
+              playing music, I love turning ideas into something that is
+              beautiful and that is inspiring.
             </p>
           </div>
 

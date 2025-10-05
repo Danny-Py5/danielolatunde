@@ -150,9 +150,9 @@ function Skills() {
             maxWidth: "50ch",
           }}
         >
-          I have two skill sets that include{" "}
+          I have two sets of skills that include{" "}
           <em style={{ textDecoration: "underline" }}>Programming</em> and
-          <em style={{ textDecoration: "underline" }}>Graphic Design.</em> Here
+          <em style={{ textDecoration: "underline" }}> Graphic Design.</em> Here
           are some of my skills in these areas.
         </p>
 
