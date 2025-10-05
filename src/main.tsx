@@ -9,6 +9,7 @@ import Services from "./pages/Services.tsx";
 import Blog from "./pages/Blog.tsx";
 import Home from "./pages/home/Home.tsx";
 import Contact from "./pages/Contact.tsx";
+import PrivacyPolicy from "./pages/Privacypolicy.tsx";
 
 const router = createBrowserRouter([
   {
@@ -38,6 +39,11 @@ const router = createBrowserRouter([
       {
         path: "/blog",
         element: <Blog />,
+      },
+      // pages not listed on the navbar
+      {
+        path: "/privacy-policy",
+        element: <PrivacyPolicy />,
       },
     ],
   },

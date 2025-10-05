@@ -1,5 +1,5 @@
 .about {
-  padding-top: 150px;
+  padding-top: var(--first-section-padding);
 
   & h2 {
     font-weight: 800;

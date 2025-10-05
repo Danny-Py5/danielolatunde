@@ -6,6 +6,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import QuickLinks from "./QuickLinks";
 import SocialLinks from "./SocialLinks"; // import React, { useContext } from "react";
+import { Link } from "react-router-dom";
 
 function Footer() {
   return (
@@ -67,11 +68,22 @@ function Footer() {
         </div>
       </div>
       <div className="copyright">
-        <p>
-          &copy; {new Date().getFullYear()} Daniel Olatunde. All rights
-          reserved.
-        </p>
-        <small>Version 2.0.0</small>
+        <div className="child">
+          <p>
+            &copy; {new Date().getFullYear()} Daniel Olatunde. All rights
+            reserved.
+          </p>
+          <small>Version 2.0.0</small>
+        </div>
+        <div className="child">
+          {/* <Link to={"/privacy-policy"}>Privacy Policy</Link> */}
+          <a
+            href="https://www.privacypolicies.com/live/4df5e7bd-38eb-4414-b015-8a50ed08b046"
+            target="_blank"
+          >
+            Privacy Policy
+          </a>
+        </div>
       </div>
     </section>
   );

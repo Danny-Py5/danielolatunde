@@ -11,3 +11,7 @@
   background-color: var(--color-white);
   box-shadow: 0 2px 25px var(--shadow-color);
 }
+
+.firstSectionPaddingTop {
+  padding-top: var(--padding-xxl);
+}

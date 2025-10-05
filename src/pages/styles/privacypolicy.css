@@ -1,0 +1,72 @@
+:root {
+  --body-background-color: whitesmoke;
+  --colour-primary: #000c05;
+  --color-primary: #000c05;
+  --color: #333;
+  --black: #020101;
+  --color-white: whitesmoke;
+  --color-secondary: #bb1bff;
+  --color-secondary-dark: #9114a2;
+  --color-secondary-light: #e478ff;
+  --color-secondary-lighter: #f4d7fd;
+  --card-background-color-secondary: #7272721c;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 90px;
+  font-family: var(--font-family);
+  font-weight: 400;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--body-background-color);
+  color: var(--color);
+  max-width: var(--max-width);
+  /* padding-bottom: 100px; */
+  margin: 0 auto;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700; /* or 900 for a bolder style */
+  color: var(--color-primary);
+  margin-bottom: 1.2rem;
+}
+
+p,
+a,
+li,
+span,
+figcaption,
+text {
+  line-height: var(--line-height, 1.5);
+  color: var(--color);
+}
+
+a {
+  text-decoration: underline;
+  text-underline-offset: 0.2rem;
+  color: inherit;
+  font-size: var(--font-size-sm);
+  transition: color var(--transition-duration);
+  line-height: unset !important;
+}
+h2 {
+  font-weight: 600;
+  margin-bottom: 1rem;
+  font-size: var(--font-size-xl);
+}
+h3 {
+  font-size: var(--font-size-l);
+}
+
+p,
+li {
+  margin-bottom: 1rem;
+}

@@ -61,6 +61,8 @@
   --padding-sm: 0.5rem;
   --padding-xs: 0.25rem;
   --padding-xl: 2rem;
+  --padding-xxl: 3rem;
+  --first-section-padding: 130px;
 
   /* width */
   --header-nav-max-width: 550px;
@@ -504,9 +506,17 @@ header:has(ul li a.active) a.active {
     margin-top: 2rem;
     text-align: center;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    /* flex-direction: column; */
+    justify-content: space-around;
     align-items: center;
+
+    & .child {
+      flex: 1;
+      text-align: left;
+    }
+    & .child:last-of-type {
+      text-align: right;
+    }
 
     & p {
       margin-bottom: 0;
