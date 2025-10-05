@@ -64,6 +64,14 @@ function About() {
               <h2>∞</h2>
               <p about="my age">Lines of Code</p>
             </div>
+            <div className="child">
+              <h2>15+</h2>
+              <p about="my age">Technologies Learned</p>
+            </div>
+            <div className="child">
+              <h2>1000+</h2>
+              <p about="my age">Hours of Coding</p>
+            </div>
           </div>
         </div>
       </div>
