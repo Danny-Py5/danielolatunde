@@ -9,7 +9,7 @@ import Services from "./pages/Services.tsx";
 import Blog from "./pages/Blog.tsx";
 import Home from "./pages/home/Home.tsx";
 import Contact from "./pages/Contact.tsx";
-import PrivacyPolicy from "./pages/Privacypolicy.tsx";
+import PrivacyPolicy from "./pages/PrivacyPolicy.tsx";
 
 const router = createBrowserRouter([
   {
