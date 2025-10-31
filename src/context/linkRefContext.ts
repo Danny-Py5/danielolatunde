@@ -17,3 +17,14 @@ const linkRefContext = createContext<linkRef>({
   blog: "",
 });
 export default linkRefContext;
+
+// Context for managing current page
+export type CurrentPageContextType = {
+  currentPage: string;
+  setCurrentPage: (page: string) => void;
+};
+
+export const CurrentPageContext = createContext<CurrentPageContextType>({
+  currentPage: "",
+  setCurrentPage: () => {},
+});

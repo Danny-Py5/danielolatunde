@@ -1,16 +1,16 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useContext } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { useRef, useState } from "react";
 import Switch from "./Switch";
+import { CurrentPageContext } from "../context/linkRefContext.ts";
 
 function Header() {
   const location = useLocation();
-  // console.log(location.pathname);
+  const { currentPage, setCurrentPage } = useContext(CurrentPageContext);
   const headerMenuRef = React.useRef<HTMLButtonElement>(null);
   const lastScrollY = useRef(window.scrollY);
 
   const [visible, setVisible] = useState(true);
-  const [activeLink, setActiveLink] = useState("");
   const allLinkRefs = {
     home: useRef(null),
     projects: useRef(null),
@@ -19,7 +19,24 @@ function Header() {
     contact: useRef(null),
     blog: useRef(null),
   };
-  // let previousActiveLink = useRef(null);
+
+  // Update current page based on location
+  useEffect(() => {
+    const path = location.pathname;
+    if (path === "/") {
+      setCurrentPage("home");
+    } else if (path === "/projects") {
+      setCurrentPage("projects");
+    } else if (path === "/about") {
+      setCurrentPage("about");
+    } else if (path === "/services") {
+      setCurrentPage("services");
+    } else if (path === "/contact") {
+      setCurrentPage("contact");
+    } else if (path === "/blog") {
+      setCurrentPage("blog");
+    }
+  }, [location.pathname, setCurrentPage]);
 
   const toggleMenu = () => {
     if (headerMenuRef.current) {
@@ -94,23 +111,7 @@ function Header() {
             <li>
               <Link
                 ref={allLinkRefs.home}
-                className={`${
-                  activeLink == "home" &&
-                  location.pathname !== "/projects" &&
-                  location.pathname !== "/about" &&
-                  location.pathname !== "/services" &&
-                  location.pathname !== "/contact" &&
-                  location.pathname !== "/blog"
-                    ? "active"
-                    : ""
-                } `}
-                onClick={() => {
-                  // deactivatePreviousActiveLink();
-                  setActiveLink(() => {
-                    // previousActiveLink = allLinkRefs.home;
-                    return "home";
-                  });
-                }}
+                className={currentPage === "home" ? "active" : ""}
                 to="/"
               >
                 Home
@@ -119,36 +120,15 @@ function Header() {
             <li>
               <Link
                 ref={allLinkRefs.projects}
-                className={`${
-                  activeLink === "projects" || location.pathname === "/projects"
-                    ? "active"
-                    : ""
-                }`}
+                className={currentPage === "projects" ? "active" : ""}
                 to="/projects"
-                onClick={() => {
-                  setActiveLink(() => {
-                    // previousActiveLink = allLinkRefs.projects;
-                    return "projects";
-                  });
-                }}
               >
                 Projects
               </Link>
             </li>
             <li>
               <Link
-                className={`${
-                  activeLink === "about" || location.pathname === "/about"
-                    ? "active"
-                    : ""
-                }`}
-                onClick={() => {
-                  // deactivatePreviousActiveLink();
-                  setActiveLink(() => {
-                    // previousActiveLink = allLinkRefs.about;
-                    return "about";
-                  });
-                }}
+                className={currentPage === "about" ? "active" : ""}
                 ref={allLinkRefs.about}
                 to="/about"
               >
@@ -157,18 +137,7 @@ function Header() {
             </li>
             <li>
               <Link
-                className={`${
-                  activeLink === "services" || location.pathname === "/services"
-                    ? "active"
-                    : ""
-                }`}
-                onClick={() => {
-                  // deactivatePreviousActiveLink();
-                  setActiveLink(() => {
-                    // previousActiveLink = allLinkRefs.services;
-                    return "services";
-                  });
-                }}
+                className={currentPage === "services" ? "active" : ""}
                 ref={allLinkRefs.services}
                 to="/services"
               >
@@ -177,18 +146,7 @@ function Header() {
             </li>
             <li>
               <Link
-                className={`${
-                  activeLink === "contact" || location.pathname === "/contact"
-                    ? "active"
-                    : ""
-                } `}
-                onClick={() => {
-                  // deactivatePreviousActiveLink();
-                  setActiveLink(() => {
-                    // previousActiveLink = allLinkRefs.contact;
-                    return "contact";
-                  });
-                }}
+                className={currentPage === "contact" ? "active" : ""}
                 ref={allLinkRefs.contact}
                 to="/contact"
               >
@@ -197,18 +155,7 @@ function Header() {
             </li>
             <li>
               <Link
-                className={`${
-                  activeLink === "blog" || location.pathname === "/blog"
-                    ? "active"
-                    : ""
-                }`}
-                onClick={() => {
-                  // deactivatePreviousActiveLink();
-                  setActiveLink(() => {
-                    // previousActiveLink = allLinkRefs.blog;
-                    return "blog";
-                  });
-                }}
+                className={currentPage === "blog" ? "active" : ""}
                 ref={allLinkRefs.blog}
                 to="/blog"
               >

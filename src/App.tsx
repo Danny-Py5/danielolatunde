@@ -1,25 +1,29 @@
-// import { useState } from "react";
+import { useState } from "react";
 import Header from "./components/Header.tsx";
 import { Outlet } from "react-router-dom";
 import linkRefContext from "./context/linkRefContext.ts";
+import { CurrentPageContext } from "./context/linkRefContext.ts";
 
 function App() {
-  // const LinkRefs = useContext(linkRefContext);
+  const [currentPage, setCurrentPage] = useState("home");
+
   return (
     <>
-      <Header />
-      <linkRefContext.Provider
-        value={{
-          home: "/home",
-          project: "/projects",
-          about: "/about",
-          service: "/service",
-          contact: "/contact",
-          blog: "/blog",
-        }}
-      >
-        <Outlet />
-      </linkRefContext.Provider>
+      <CurrentPageContext.Provider value={{ currentPage, setCurrentPage }}>
+        <Header />
+        <linkRefContext.Provider
+          value={{
+            home: "/home",
+            project: "/projects",
+            about: "/about",
+            service: "/service",
+            contact: "/contact",
+            blog: "/blog",
+          }}
+        >
+          <Outlet />
+        </linkRefContext.Provider>
+      </CurrentPageContext.Provider>
     </>
   );
 }
