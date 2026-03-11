@@ -153,7 +153,7 @@ function Header() {
                 Contact
               </Link>
             </li>
-            <li>
+            {/* <li>
               <Link
                 className={currentPage === "blog" ? "active" : ""}
                 ref={allLinkRefs.blog}
@@ -161,7 +161,7 @@ function Header() {
               >
                 Blog
               </Link>
-            </li>
+            </li> */}
             <li>
               <Switch />
             </li>

@@ -1,7 +1,55 @@
 import "./styles/about.css";
 import "../index.css";
 import Footer from "../components/Footer";
+import { Link } from "react-router-dom";
 // import styles from "../utils.module.css";
+
+const featuredProjects = [
+  {
+    id: 1,
+    title: "Jimfocug Website",
+    description:
+      "A responsive company website for a software development firm, designed to present services, products, and business solutions.",
+    imageUrl: "/projects/project-jimfocug.png",
+    liveUrl: "https://jimfocug.com/",
+  },
+  {
+    id: 2,
+    title: "Online Mock Examination System",
+    description:
+      "A web-based mock examination platform that allows students to create accounts, select subjects, take timed exams, and receive instant results.",
+    imageUrl: "/projects/project-mock-exam.png",
+    liveUrl: "https://mock-exam-sta-dannypy.vercel.app/",
+  },
+];
+
+function FeaturedProjectCard({
+  project,
+}: {
+  project: (typeof featuredProjects)[0];
+}) {
+  return (
+    <div className="featured-project-card">
+      <img
+        src={project.imageUrl}
+        alt={`${project.title} screenshot`}
+        className="featured-project-image"
+      />
+      <div className="featured-project-info">
+        <h4>{project.title}</h4>
+        <p>{project.description}</p>
+        <a
+          href={project.liveUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="project-button"
+        >
+          View Project
+        </a>
+      </div>
+    </div>
+  );
+}
 
 function About() {
   // const navigate = Navigate();
@@ -39,6 +87,19 @@ function About() {
           <p>
             <i>I just fell good when I handle my keys coz I love what I do.</i>
           </p>
+
+          <div className="featured-projects-section">
+            <h3 style={{ margin: "3rem 0 1.5rem" }}>Featured Projects</h3>
+            <p className="featured-projects-intro">
+              Here's a glimpse of some of my work. Feel free to check out the
+              full <Link to="/projects">projects page</Link> for more details.
+            </p>
+            <div className="featured-projects-container">
+              {featuredProjects.map((project) => (
+                <FeaturedProjectCard key={project.id} project={project} />
+              ))}
+            </div>
+          </div>
 
           <h3 style={{ margin: "3rem 0 1rem" }}>Beyond Coding</h3>
           <div>

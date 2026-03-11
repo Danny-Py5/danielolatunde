@@ -114,6 +114,7 @@ function Projects() {
     <section>
       <section className="projects-section" id="projects">
         <h2>My Projects</h2>
+        <p>I work with you, Not for you!</p>
         <div className="projects-container">
           {projectData.map((project) => (
             <ProjectCard key={project.id} project={project} />
