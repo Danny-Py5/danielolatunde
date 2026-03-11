@@ -1,4 +1,5 @@
 // import React from "react";
+import Footer from "../components/Footer";
 import "./styles/Projects.css";
 
 type ProjectData = {
@@ -7,9 +8,9 @@ type ProjectData = {
   description: string;
   technologies: string[];
   imageUrl: string;
-  liveUrl: string;
+  liveUrl?: string;
   private?: boolean;
-  repoUrl: string;
+  repoUrl?: string;
 };
 const projectData: ProjectData[] = [
   {
@@ -50,47 +51,61 @@ const projectData: ProjectData[] = [
     liveUrl: "https://netflix-clone-chi-puce-60.vercel.app/",
     repoUrl: "https://github.com/Danny-Py5/Netflix-clone",
   },
+
+  {
+    id: 4,
+    title: "MCICBT – Cross-Platform Computer Based Test System",
+    description:
+      "MCICBT is a cross-platform Computer Based Test (CBT) application designed for educational institutions to conduct digital examinations. Built with Flutter, the system runs on web, mobile, and desktop devices, allowing students to take exams and receive results efficiently. Search on playstore to view",
+    technologies: ["Flutter", "Dart", "C#", ".NET", "SQLite"],
+    imageUrl: "/projects/mcicbt.png",
+    private: true,
+  },
 ];
 
 function ProjectCard({ project }: { project: ProjectData }) {
   return (
-    <div className="project-card">
-      <div className="project-image-container">
-        {/* To add your image, replace the src in the img tag below */}
-        <img src={project.imageUrl} alt={`${project.title} screenshot`} />
-      </div>
-      <div className="project-info">
-        <h3>{project.title}</h3>
-        <p>{project.description}</p>
-        <div className="project-technologies">
-          {project.technologies.map((tech, index) => (
-            <span key={index} className="tech-tag">
-              {tech}
-            </span>
-          ))}
+    <>
+      <div className="project-card">
+        <div className="project-image-container">
+          {/* To add your image, replace the src in the img tag below */}
+          <img src={project.imageUrl} alt={`${project.title} screenshot`} />
         </div>
-        <div className="project-links">
-          <a
-            href={project.liveUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="project-button"
-          >
-            Live Demo
-          </a>
-          {!project.private && (
-            <a
-              href={project.repoUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="project-button"
-            >
-              Source Code
-            </a>
-          )}
+        <div className="project-info">
+          <h3>{project.title}</h3>
+          <p>{project.description}</p>
+          <div className="project-technologies">
+            {project.technologies.map((tech, index) => (
+              <span key={index} className="tech-tag">
+                {tech}
+              </span>
+            ))}
+          </div>
+          <div className="project-links">
+            {project.liveUrl && (
+              <a
+                href={project.liveUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="project-button"
+              >
+                Live Demo
+              </a>
+            )}
+            {!project.private && (
+              <a
+                href={project.repoUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="project-button"
+              >
+                Source Code
+              </a>
+            )}
+          </div>
         </div>
       </div>
-    </div>
+    </>
   );
 }
 
@@ -105,6 +120,8 @@ function Projects() {
           ))}
         </div>
       </section>
+
+      <Footer />
     </section>
   );
 }
