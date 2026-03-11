@@ -129,3 +129,33 @@
   background-color: var(--color-secondary-dark);
   color: var(--color-white);
 }
+
+/* Philosophy Section */
+.philosophy-section {
+  margin-top: 4rem;
+  text-align: center;
+}
+
+.philosophy-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: var(--gap-xl, 32px);
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.philosophy-item {
+  padding: var(--padding-l, 1.5rem);
+  background-color: var(--card-background-color-secondary);
+  border-radius: var(--border-radius-normal, 0.8rem);
+}
+
+.philosophy-item svg {
+  color: var(--color-secondary);
+  margin-bottom: 1rem;
+}
+
+.philosophy-item h4 {
+  font-size: 1.2rem;
+  margin-bottom: 0.75rem;
+}

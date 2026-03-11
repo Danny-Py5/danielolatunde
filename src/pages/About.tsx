@@ -2,6 +2,12 @@ import "./styles/about.css";
 import "../index.css";
 import Footer from "../components/Footer";
 import { Link } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faLightbulb,
+  faUsers,
+  faCode,
+} from "@fortawesome/free-solid-svg-icons";
 // import styles from "../utils.module.css";
 
 const featuredProjects = [
@@ -88,6 +94,41 @@ function About() {
             <i>I just fell good when I handle my keys coz I love what I do.</i>
           </p>
 
+          <div className="philosophy-section">
+            <h3 style={{ margin: "3rem 0 1.5rem" }}>
+              My Development Philosophy
+            </h3>
+            <div className="philosophy-container">
+              <div className="philosophy-item">
+                <FontAwesomeIcon icon={faCode} size="2x" />
+                <h4>Clean & Scalable Code</h4>
+                <p>
+                  I believe in writing code that is not just functional, but
+                  also clean, maintainable, and scalable. This ensures that
+                  projects are built on a solid foundation for future growth.
+                </p>
+              </div>
+              <div className="philosophy-item">
+                <FontAwesomeIcon icon={faUsers} size="2x" />
+                <h4>User-Centric Design</h4>
+                <p>
+                  The user is at the heart of every project. I focus on creating
+                  intuitive, accessible, and engaging user experiences that
+                  solve real-world problems effectively.
+                </p>
+              </div>
+              <div className="philosophy-item">
+                <FontAwesomeIcon icon={faLightbulb} size="2x" />
+                <h4>Continuous Learning</h4>
+                <p>
+                  The tech world is always evolving. I am committed to lifelong
+                  learning, constantly exploring new technologies and
+                  methodologies to deliver modern and efficient solutions.
+                </p>
+              </div>
+            </div>
+          </div>
+
           <div className="featured-projects-section">
             <h3 style={{ margin: "3rem 0 1.5rem" }}>Featured Projects</h3>
             <p className="featured-projects-intro">
@@ -120,19 +161,19 @@ function About() {
             </div>
             <div className="child">
               <h2>{new Date().getFullYear() - 2023}</h2>
-              <p about="my age">Years Coding</p>
+              <p about="my years of coding">Years Coding</p>
             </div>
             <div className="child">
               <h2>∞</h2>
-              <p about="my age">Lines of Code</p>
+              <p about="lines of code i have written">Lines of Code</p>
             </div>
             <div className="child">
               <h2>15+</h2>
-              <p about="my age">Technologies Learned</p>
+              <p about=" texhnologies learned">Technologies Learned</p>
             </div>
             <div className="child">
               <h2>1000+</h2>
-              <p about="my age">Hours of Coding</p>
+              <p about="hours of coding">Hours of Coding</p>
             </div>
           </div>
         </div>
