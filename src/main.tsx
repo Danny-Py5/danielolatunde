@@ -9,7 +9,7 @@ import Services from "./pages/Services.tsx";
 import Blog from "./pages/Blog.tsx";
 import Home from "./pages/home/Home.tsx";
 import Contact from "./pages/Contact.tsx";
-import PrivacyPolicy from "./pages/Privacypolicy.tsx";
+import PrivacyPolicy from "./pages/PrivacyPolicy.tsx";
 
 const router = createBrowserRouter([
   {
@@ -52,5 +52,5 @@ const router = createBrowserRouter([
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
     <RouterProvider router={router} />
-  </StrictMode>
+  </StrictMode>,
 );
