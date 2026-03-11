@@ -1,5 +1,6 @@
 import "./styles/about.css";
 import "../index.css";
+import Footer from "../components/Footer";
 // import styles from "../utils.module.css";
 
 function About() {
@@ -75,6 +76,8 @@ function About() {
           </div>
         </div>
       </div>
+
+      <Footer />
     </section>
   );
 }
