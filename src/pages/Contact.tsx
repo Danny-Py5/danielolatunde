@@ -20,7 +20,16 @@ function Contact() {
   const handleSubmit = (e: FormEvent) => {
     e.preventDefault();
     // build a message and open WhatsApp with prefilled text
-    const text = `Name: ${form.name}\nEmail: ${form.email}\nMessage: ${form.message}`;
+    const text = `Name: ${form.name}
+Email: ${form.email}
+Message:
+Hello,
+
+My name is ${form.name}. I visited your portfolio and I would like to make an inquiry regarding your services.
+
+Please let me know your availability and how we can proceed. I look forward to your response.
+
+Thank you.`;
     const whatsappNumber = "2348165521344"; // international format without +
     const url = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
       text,
